@@ -6,7 +6,10 @@ namespace PickRandomCards
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("Enter the number of cards to pick: ");
+            string line = Console.ReadLine();
+            Console.WriteLine(line);
+
         }
     }
 }
