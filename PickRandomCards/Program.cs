@@ -8,17 +8,15 @@ namespace PickRandomCards
         {
             Console.Write("Enter the number of cards to pick: ");
             string line = Console.ReadLine();
-            if (int.TryParse(line, out int numberOfCards))
+            do
             {
                 foreach (string card in CardPicker.PickSomeCards(numberOfCards))
                 {
                     Console.WriteLine(card);
                 }
             }
-            else
-            {
-                Console.WriteLine("Please enter a valid number. ");
-            }
+            while (int.TryParse(line, out int numberOfCards) != true) ;
+            Console.WriteLine("Please enter a valid number. ");
 
         }
     }
